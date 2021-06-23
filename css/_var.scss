@@ -1,0 +1,76 @@
+/* colores */
+$letrasnegras: #060A24;;
+$letrasblancas: #ffffff;
+$btnverde: #00f3bb;
+$puntoazul: #0000ec;
+/* tamaños letras */
+$letra14m: 14px;
+$letra16: 16px;
+$letra18: 18px;
+$letra24: 24px;
+$letra36m: 36px;
+$letra48: 48px;
+$letra64: 64px;
+
+$anchoDesktop: 1440px;
+$anchoMobile: 767px;
+$maxaltohello: 84px;
+$letrasans: "IBM Plex Sans", sans-serif;
+$letramono: "IBM Plex Mono", monospace;
+$letrammedio: "IBM Plex Mono", "IBM Plex Mono-Medium", monospace;
+$letrassemibold: "IBM Plex Sans", "IBM Plex Sans-SemiBold", "sans-serif";
+$ancholinks: 298px;
+$altolinks: 225px;
+$altofotos: 300px; 
+$anchofotos: 100%;
+
+%linksmobile {
+  width: $ancholinks;
+  height: $altolinks;
+}
+%filles {
+  width: $anchofotos;
+  height: $altofotos;
+}
+
+@mixin titulos ($lettercolor,$sizeletter,$heightletra){
+  font-family:"IBM Plex Sans" ;
+  font-size: $sizeletter;
+  color: $lettercolor;
+  letter-spacing: 0;
+  height: $heightletra;
+  font-weight: 400;
+  
+}
+@mixin parrafos ($lineh, $sizeletter){
+font-family: "IBM Plex Mono";
+font-size: $sizeletter;
+color: $letrasnegras;
+letter-spacing: 0;
+line-height: $lineh;
+font-weight: 400;
+}
+%btnmobile {
+  width: 288px;
+  height: 48px;
+  font-family: $letrammedio;
+  font-size: $letra16;
+  color: $letrasnegras;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+  background-color: $btnverde;
+}
+@mixin btndesktop($ancho, $alto) {
+  width: $ancho;
+  height: $alto;
+  font-family: $letrammedio;
+  font-size: $letra18;
+  color: $letrasnegras;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+  background-color: $btnverde;
+  cursor: pointer;
+  font-weight: 500;
+  }

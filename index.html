@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9cbbfb79d3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/st.css">
+    <title>Podcast</title>
+</head>
+<body>
+    <header>
+        <img id="logoPodcast" src="./archivos/logo.svg" alt="logoPodcast">
+    <nav>
+        <input type="checkbox" id="checkH" class="check">
+        <label for="checkH" class="labels"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
+        <ul class="menuh">
+            <li class="hamburguesa"><a href="#Episodios">EPISODIOS</a></li>
+            <li class="hamburguesa"><a href="#Nosotros">NOSOTROS</a></li>
+            <li class="hamburguesa"><a href="#Entrevistas">ENTREVISTAS</a></li>
+            <li class="hamburguesa"><a href="#Topicos">TÓPICOS</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section class="section1">
+            <h1 class="titulohello"><span class="hi">Hello <span class="raya">  world</span></span><span class="hi" id="hola">pale blue dot<span id="punto">.</span></span></h1>
+            <p class="parrafo_section1">
+              El portal de podcasts que explora el mundo de la programacion y la
+              tecnologia. Nuevos episodios, todos los jueves cada 15 dias.
+            </p>
+           <input class="button" type="button" value="CONOCE MÁS" />
+        </section>
+        <section class="section2" id="Episodios">
+            <h1 id="h1episodios">Episodios</h1>
+            <div class="episodios">
+                <iframe class="url" src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" allow="encrypted-media" ></iframe>
+                <iframe class="url" src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" allow="encrypted-media"></iframe>
+                <iframe class="url" src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" allow="encrypted-media"></iframe>
+                <iframe class="url" src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn" allow="encrypted-media"></iframe>
+            </div>
+        </section>
+        <section class="section3" id="Nosotros">
+            <img  class="desPhone" src="./archivos/phone.png" alt="telefonoDesplazado"/>
+            <div class="cont_nous">
+                <h2 class="nous"> De dónde venimos</h2>
+                <p class="parrafo_section3">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by
+                this point of pale light. <br><br>
+                Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness,
+                there is no hint that help will come from elsewhere to save us from ourselves.</p>
+            </div>
+        </section>
+        <section class="section4" id="Entrevistas">
+            <h2 class="h2Invitadas">Invitadas/os estelares</h2>
+            <div class="cont_fille">
+            <img class="ifilles" src="./archivos/grace-hopper.png" alt="GraceHopper" />
+            <img class="ifilles" src="./archivos/Katie-Bouman.png" alt="KatieBouman" />
+            <img class="ifilles" src="./archivos/Margaret_Hamilton.png" alt="MargaretHamilton" />
+            <img class="ifilles" src="./archivos/An_E.R.A.Univac_11103_computer_in_the_1950s.png" alt="1950pc"/>
+            <img class="ifilles" src="./archivos/Computer_operators_with_an_Eniac_the_world’s_first_programmable_general-purpose_computer.png" alt="GeneralPurposePc" />
+            <img class="ifilles" src="./archivos/susan-kare.png" alt="SusanKare"/>
+            </div>
+        </section>
+        <section class="section5" id="Topicos">
+            <h2 class="h2Topicos">Algunos de nuestros temas</h2>
+            <div class="cont_signos">
+               <div class="signos">
+                     <img class="size_signos" src="./archivos/icon1.svg" alt="TrabajoRemoto" />
+                     <p class="miniTitulos">Trabajo remoto</p>
+               </div>
+               <div class="signos">
+                    <img class="size_signos" src="./archivos/icon2.svg" alt="Programación" />
+                <p class="miniTitulos">Repensando la programación</p>
+              </div>
+              <div class="signos">
+                    <img class= "size_signos" src="./archivos/icon3.svg" alt="Código" />
+                <p class="miniTitulos">Bases del código</p>
+              </div>
+              <div class="signos">
+                    <img class="size_signos" src="./archivos/icon4.svg" alt="SeguridadInformatica" />
+                <p class="miniTitulos">Seguridad informática</p>
+              </div>
+            </div>
+        </section>
+        <section class="section6">
+            <h2 class="h2Novedades">¿Querés las últimas novedades?</h2>
+            <input class="button" type="button" value="ESCUCHÁ LOS EPISODIOS" id="mas" />
+        </section>
+    </main>
+    <footer class="sectionFooter">
+        <p class="parrafo_sectionFooter">© 2021— Hello blue pale dot </p>
+        <ul class="rsociales">
+          <li><a href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://telegram.org" target="_blank"><i class="fab fa-telegram"></i></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

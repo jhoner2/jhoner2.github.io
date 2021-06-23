@@ -1,0 +1,542 @@
+@import "var";
+*{
+    margin: 0px;
+    padding: 0px;
+    max-width: 767px;
+   /*  overflow-inline: hidden; */
+}
+body {
+    max-width: 100%;
+    /* overflow: hidden; */
+  }
+  header {
+    height: 44px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    padding-top: 2%;
+    position: sticky;
+    background:white;
+    top: 0;
+    z-index: 999;
+  }
+  #logoPodcast {
+    margin-left: 5%;
+    margin-bottom: 20%;
+    width: 24px;
+    height: 24px;
+  }
+  #checkH{
+    display: none;
+  }
+  .nav {
+   position: fixed;
+   right: 8%; 
+   top: 5%; 
+   
+   }
+   
+  .menuh {
+    display: none;
+    background-color: #0000ec;
+    top: 60px;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+  }
+ 
+  .menuh li a {
+    color: $letrasblancas;
+    text-decoration: none;
+  /*   margin-right: 10px; */
+    font-size: $letra16;
+    font-family: $letramono;
+    line-height: 28px;
+  }
+  .menuh li a:hover{
+      text-decoration: line-through;
+      color: #00f3bb;
+  }
+.menuh li a:active{
+  text-decoration: line-through;
+  color: rgba(6, 10, 36, 0.56);
+}
+  .check:checked ~ ul  {
+    display: block;
+    padding-left: 10%;
+    list-style: none;
+  }
+  .check:checked ~ .labels .fa-bars{
+      display: none;
+      
+  }
+  .check:not(:checked) ~ .labels .fa-times {
+   display: none;
+   
+  }
+  
+  /* fin menu hamburguesa y navegador*/
+
+  /*  section 1 */
+   .section1 {
+    width: 100%;
+    height: auto;
+    padding-left: 7%;
+    margin-top: 29px;
+  }
+  .hi {
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin-left: 3%;
+    margin-right: 2%;
+  }
+.titulohello {
+    @include titulos ($letrasnegras,$letra36m, 42px);
+    margin-bottom: 100px;
+    
+}
+  .raya {
+    height: 42px;
+    width: 101px;
+    letter-spacing: 0;
+    line-height: 42px;
+    text-decoration: line-through;
+  }
+  #punto {
+    color: $letrasnegras;
+    font-size: $letra36m;
+    height: 42px;
+    width: 10px;
+    letter-spacing: 0;
+    line-height: 42px;
+  }
+  .parrafo_section1 {
+    @include parrafos (22px, $letra14m);
+    width: 70%;
+    margin-top: 70px;
+    margin-bottom: 36px;
+    margin-left: 3%;
+    margin-right: 5%;
+    text-align: justify;
+  }
+  .button {
+      @extend %btnmobile;
+     margin-left: 3%;
+     margin-bottom: 10px;
+     } 
+     .button:hover {
+        color: $letrasblancas;
+        background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+      }
+  /* section 2 */
+  .section2 {
+    
+    margin-top: 2%;
+    height: 1200px;
+    width: 100%;
+    clip-path: polygon(0 7%, 100% 4%, 100% 93%, 0 96%);
+    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  } 
+  .episodios {
+    margin-top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+  }
+
+  #h1episodios {
+    @include titulos ($letrasblancas,$letra36m, 42px);
+    font-weight: 400;
+    width: 157px;
+    padding-left: 10%;
+    padding-top: 33%;
+    
+  }
+
+  .url {
+    @extend %linksmobile;
+    margin-top: -4%;
+    margin-bottom: -4%;
+    border:0;
+    background:rgba(0,0,0,0);
+  } 
+  /* section 3 */
+  .section3 {
+    display: block;
+      
+  }
+  .desPhone {
+    
+    height: 519px;
+    width: 80%; 
+    position: relative;
+    bottom: 170px;
+    right: auto;
+    left: 7%;
+  }
+
+  .cont_nous{
+    
+    width: 80%;
+    height: 350px;
+    right: auto;
+    left: auto;
+    margin-left: 10%;
+    bottom: 100px;
+    margin-top: -127px;
+    margin-bottom: 54px;
+    
+  }
+  .nous {
+    @include titulos ($letrasnegras,$letra36m,84px);
+    width: 80%;
+    margin-bottom: 10px;
+    
+  }
+  .parrafo_section3 {
+    @include parrafos (22px, $letra14m);
+    width: 100%;
+    text-align: justify;
+  } 
+
+  /*  section 4 */
+  .section4{
+    display: block;
+    margin-top: 54px;
+  }
+  .h2Invitadas {
+    @include titulos ($letrasnegras,$letra36m,84px);
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    margin-top: 10%;
+  }
+  .cont_fille{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center
+  }
+  .ifilles {
+    @extend %filles;
+  }
+
+  /* section 5 */
+  .section5{
+    display: block;
+  }
+ .h2Topicos {
+    @include titulos ($letrasnegras, $letra36m, 84px);
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 64px;
+    margin-bottom: 69px;
+    
+  } 
+
+  .cont_signos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: max-content;
+  }
+  .signos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: $letrasans;
+    font-weight: 600;
+    font-size: $letra24;
+    color: $letrasnegras;
+    letter-spacing: 0;
+    margin: 5%;
+  }
+  .size_signos {
+    width: 104px;
+    height: 104px;
+    display: block;
+    margin: auto;
+  }
+  .signos img{
+    justify-content: center;
+  }
+  .signos p {
+    width: 100%;
+    margin-top: 29px;
+    text-align: center;
+  } 
+
+  /* section 6 */
+  .section6 {
+    width: 100%;
+    height: 341px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(0 19%, 100% 0, 100% 100%, 0 100%);
+    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    margin-top: 20px;
+  }
+  .h2Novedades {
+    @include titulos ($letrasblancas,$letra36m, 126px);
+    width: 70%;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 10%;
+    margin-bottom: 0;
+    margin-top: 10%;
+  }
+  #mas{
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+  
+  /* section 7 footer */
+  .sectionFooter {
+    display: flex;
+    background-color: white;
+    height: 70px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .parrafo_sectionFooter {
+    font-family: $letramono;
+    font-size: $letra14m;
+    color: $letrasnegras;
+    letter-spacing: 0;
+    height: 22px;/* tamaño de la linea  */
+    font-weight: 400;
+    line-height: 22px;
+    width: 80%;
+    margin-left: 30%;
+  }
+ 
+  .rsociales {
+    margin-left: 12%;
+    list-style: none;
+    display: flex;
+    width: 248px;
+    height: auto;
+    margin-right: 64px;
+    justify-content: space-around;
+  } 
+  .fab {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+    color: $letrasnegras;
+    padding-left: 15px;
+  }
+  /* desktop */
+  @media screen and (min-width: 767.5px){
+*{
+  max-width: 1440px ;
+}
+    body {
+      width:100%;
+    }
+    .header {
+      height: 80px;
+      width: 100%;
+      align-items: center;
+          }
+    #logoPodcast {
+      margin-left: 5%;
+      margin-bottom: 20%;
+      width: 36px;
+      height: 36px;
+    }
+    #checkH{
+      display: none;
+    }
+    .labels{
+      display:none;
+    }
+      
+     .menuh{
+      display:flex;
+      background-color: white;
+      width: 100%;
+      height: 30px;
+      list-style: none;
+      top:5%;
+      left:55%;
+      
+    } 
+    .menuh li {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .menuh li a {
+      color: $letrasnegras;
+    }
+    /* section 1 */
+    .section1 {
+      padding-left: 7%;
+      margin-top: 29px;
+    }
+    .hi{
+      display:inline;    
+    }
+    #hola{
+      margin-left: -5px;
+    }
+    .titulohello{
+      @include titulos ($letrasnegras,$letra64,84px);
+      margin-top: 5%;
+      margin-bottom: 0;
+     
+    }
+    #punto{
+      color: $puntoazul;
+    }
+    .parrafo_section1 {
+      @include parrafos (24px, $letra16);
+      width: 628px;
+      height: 48px;
+      margin-top: 0;
+    }
+    .button{
+      @include btndesktop(226px, 56px);
+      border:0;
+    }
+    .section2{
+    margin-top: 0%;
+    height: 1043px;
+    width: 100%;
+    clip-path: polygon(0 14%, 100% 0, 100% 85%, 0 100%);
+    }
+    .episodios {
+      margin-top: 2%;
+      
+    }
+    #h1episodios {
+      @include titulos ($letrasblancas,$letra48, 62px);
+      font-weight: 400;
+      width: 209px;
+      padding-left: 10%;
+      padding-top: 10%;
+           
+    }
+    .url {
+     width:584px;
+     height:232px;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      } 
+      .section3 {
+        display: flex;
+      }
+      .desPhone {
+        height: 700px;
+        width: 550px; 
+        bottom: 170px;
+        right: auto;
+        left: 3%;
+      }
+      .cont_nous{
+    
+        width: 464px;
+        height: 290px;
+        right: auto;
+        left: auto;
+        margin-left: 10%;
+        bottom: 100px;
+        margin-top: 0px;
+        margin-bottom: 54px;
+       
+      }
+      .nous {
+        @include titulos ($letrasnegras, $letra48, 62px);
+        width: 400px;
+                
+      }
+      .parrafo_section3 {
+        @include parrafos (24px, $letra16);
+       
+      } 
+      /* section 4 */
+      .section4{
+        margin-top: -220px;
+      }
+      .h2Invitadas {
+        @include titulos ($letrasnegras, $letra48,62px);
+        width: 481px;
+       
+      }
+      .ifilles {
+       width:440px ;
+       height:364px ;
+      }
+    /* section 5 */
+    .h2Topicos {
+      @include titulos ($letrasnegras, $letra48, 62px);
+      width: 586px;
+      margin-left: 10%;
+      margin-top: 64px;
+      margin-bottom: 69px;
+      
+    } 
+      .cont_signos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: max-content;
+    }
+   /* section 6 */
+   .section6{
+     height: 518px;
+   }
+   .h2Novedades {
+    @include titulos ($letrasblancas,$letra48, 62px);
+    width: 692px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 10%;
+    margin-bottom: 0;
+    margin-top: 10%;
+  }
+  #mas{
+    width: 345px;
+    margin-top: 36px;
+    margin-left: 35%;
+  }
+  /* footer */
+  .sectionFooter{
+    flex-direction: row;
+    width: 100%;
+    height: 95px;
+    margin: 0;
+    padding: 0;
+  }
+  .parrafo_sectionFooter {
+   
+    font-size: $letra16;
+    height: 28px;
+    font-weight: 400;
+    line-height: 28px;
+    width: 269px;
+    margin-left: 10%;  
+  }
+  
+  .fab {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28px;
+    color: $letrasnegras;
+    padding-left: 15px;
+  }
+    }
+    /* the end */
